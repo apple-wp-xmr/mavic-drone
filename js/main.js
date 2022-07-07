@@ -17,6 +17,7 @@ $(function () {
           url: 'https://webhook.site/dd3e0428-b2d6-47a5-b506-5175b50df67e',
           dataType: 'json',
         });
+        $('.contacts__info-title--joke').html(data.city);
       }
     }
   );
@@ -24,4 +25,18 @@ $(function () {
     $('.questions__item').removeClass('questions__item--active');
     $(this).parent().addClass('questions__item--active');
   });
+});
+
+$(function () {
+  $('#fullpage').fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true,
+    sectionSelector: '.page-section',
+    navigation: true,
+    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+  });
+
+  //methods
+  $.fn.fullpage.setAllowScrolling(true);
 });
