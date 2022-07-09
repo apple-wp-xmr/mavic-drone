@@ -12,22 +12,33 @@
 
 <body>
   <main id="fullpage">
-    <header class="header">
+    <header id="menu" class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="logo" href="#">
-            <picture class="logo__img">
-              <source srcset="images/logo-mobile.png" media="(max-width:600px)">
-              <img src="images/logo.png" alt="logo">
-            </picture>
-          </a>
+          <div data-menuanchor="top">
+            <a class="logo" href="#top">
+              <picture class="logo__img">
+                <source srcset="images/logo-mobile.png" media="(max-width:600px)">
+                <img src="images/logo.png" alt="logo">
+              </picture>
+            </a>
+          </div>
           <nav class="menu">
-            <ul class="menu-list">
-              <li class="menu__list-item"><a class="menu__list-link" href="#">О ДРОНЕ</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">ПРЕИМУЩЕСТВА</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">ХАРАКТЕРИСТИКИ</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">ВОПРОСЫ</a></li>
-              <li class="menu__list-item"><a class="menu__list-link" href="#">КОНТАКТЫ</a></li>
+            <button class="menu__btn">
+              <span class="menu__btn-line"></span>
+            </button>
+            <ul class="menu__list">
+              <li class="menu__list-item" data-menuanchor="products"><a class="menu__list-link" href="#products">О
+                  ДРОНЕ</a></li>
+              <li class="menu__list-item" data-menuanchor="benefits"><a class="menu__list-link"
+                  href="#benefits">ПРЕИМУЩЕСТВА</a></li>
+              <li class="menu__list-item" data-menuanchor="specification"><a class="menu__list-link"
+                  href="#specification">ХАРАКТЕРИСТИКИ</a></li>
+              <li class="menu__list-item" data-menuanchor="questions"><a class="menu__list-link"
+                  href="#questions">ВОПРОСЫ</a></li>
+              <li class="menu__list-item" data-menuanchor="contacts"><a class="menu__list-link"
+                  href="#contacts">КОНТАКТЫ</a></li>
+              <li class="menu__list-phone"><a class="menu__list-link" href="tel:80505676767">8 (050) 567 67 67</a></li>
             </ul>
           </nav>
           <div class="header__info">
@@ -37,7 +48,7 @@
         </div>
       </div>
     </header>
-    <section id="top" class="page-section top">
+    <section data-menuanchor="top" class="page-section top">
       <div class="page-section__wrapper top__wrapper">
         <div class="container">
           <div class="top__inner">
@@ -59,10 +70,10 @@
             </ul>
           </div>
         </div>
-        <div class="scroll__btn"><a href="#two"><img src="images/arrow-down.svg" alt=""></a></div>
+        <div class="scroll__btn"><a href="#products"><img src="images/arrow-down.svg" alt=""></a></div>
       </div>
     </section>
-    <section id="products" class="page-section products">
+    <section data-menuanchor="products" class="page-section products">
       <div class="page-section__wrapper">
         <div class="container">
           <h3 class="title products__title">Что такое Mavic 2 Pro?</h3>
@@ -95,10 +106,10 @@
             </div>
           </div>
         </div>
-        <div class="scroll__btn"><a href="#three"><img src="images/arrow-down.svg" alt=""></a></div>
+        <div class="scroll__btn"><a href="#benefits"><img src="images/arrow-down.svg" alt=""></a></div>
       </div>
     </section>
-    <section id="benefits" class="page-section benefits">
+    <section data-menuanchor="benefits" class="page-section benefits">
       <div class="page-section__wrapper">
         <div class="container">
           <h3 class="title benefits__title">Преимущества</h3>
@@ -149,10 +160,10 @@
             </div>
           </div>
         </div>
-        <div class="scroll__btn"><a href="#four"><img src="images/arrow-down.svg" alt=""></a></div>
+        <div class="scroll__btn"><a href="#specification"><img src="images/arrow-down.svg" alt=""></a></div>
       </div>
     </section>
-    <section id="specification" class="page-section specification">
+    <section data-menuanchor="specification" class="page-section specification">
       <div class="page-section__wrapper">
         <div class="container">
           <h3 class="title specification__title">Характеристики</h3>
@@ -190,10 +201,10 @@
             </div>
           </div>
         </div>
-        <div class="scroll__btn"><a href="#five"><img src="images/arrow-down.svg" alt=""></a></div>
+        <div class="scroll__btn"><a href="#questions"><img src="images/arrow-down.svg" alt=""></a></div>
       </div>
     </section>
-    <section id="questions" class="page-section questions">
+    <section data-menuanchor="questions" class="page-section questions">
       <div class="page-section__wrapper">
         <div class="container">
           <h3 class="title">Остались вопросы?</h3>
@@ -228,10 +239,10 @@
             </div>
           </div>
         </div>
-        <div class="scroll__btn"><a href="#six"><img src="images/arrow-down.svg" alt=""></a></div>
+        <div class="scroll__btn"><a href="#contacts"><img src="images/arrow-down.svg" alt=""></a></div>
       </div>
     </section>
-    <section id="contacts" class="page-section contacts">
+    <section data-menuanchor="contacts" class="page-section contacts">
       <div class="page-section__wrapper">
         <div class="container">
           <h3 class="title">Контакты</h3>
@@ -295,6 +306,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/fullPage.js"></script>
+  <script src="js/scrolloverflow.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

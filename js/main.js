@@ -34,9 +34,23 @@ $(function () {
     scrollHorizontally: true,
     sectionSelector: '.page-section',
     navigation: true,
-    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    scrollOverflow: true,
+
+    anchors: [
+      'top',
+      'products',
+      'benefits',
+      'specification',
+      'questions',
+      'contacts',
+    ],
+    menu: '#menu',
   });
 
   //methods
   $.fn.fullpage.setAllowScrolling(true);
+
+  $('.menu__btn').on('click', function () {
+    $(this).toggleClass('menu__btn--active');
+  });
 });
